@@ -1,0 +1,4 @@
+body {
+  line-height: $default-line-height;
+  @include font-size($default-font-size);
+}
