@@ -1,4 +1,5 @@
 @import "normalize/import-now";
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Indie+Flower|Pacifico');
 
 /*
  * System variables
@@ -14,16 +15,17 @@
 @import "mixins/font-size";
 
 /*
+ * Vendors
+ */
+
+@import "bootstrap/scss/bootstrap";
+
+/*
  * Partials
  */
 
 @import "partials/body";
 
-/*
- * Vendors
- */
-
-@import "bootstrap/scss/bootstrap";
 
 
 /*
