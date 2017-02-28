@@ -16,7 +16,6 @@ const ApplicationLayoutView = Marionette.View.extend({
   },
 
   onRenderRegion (region, view) {
-    console.log(arguments)
     App.rootView.getRegion(region).show(view)
   }
 

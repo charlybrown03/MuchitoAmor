@@ -1,0 +1,8 @@
+.navbar {
+
+  @include mq($from: xs, $until: lg) {
+    .nav-link {
+      text-align: center;
+    }
+  }
+}
