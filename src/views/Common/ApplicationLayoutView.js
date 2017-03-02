@@ -1,8 +1,8 @@
+import ApplicationLayoutTemplate from './templates/ApplicationLayoutView.hbs'
+
 const ApplicationLayoutView = Marionette.View.extend({
 
-  el: '#app',
-
-  template: require('./templates/ApplicationLayoutView.hbs'),
+  template: ApplicationLayoutTemplate,
 
   regions: {
     header: '.app--header',
@@ -16,7 +16,7 @@ const ApplicationLayoutView = Marionette.View.extend({
   },
 
   onRenderRegion (region, view) {
-    App.rootView.getRegion(region).show(view)
+    App.getView().getRegion(region).show(view)
   }
 
 })
