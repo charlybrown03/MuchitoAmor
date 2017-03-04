@@ -1,7 +1,7 @@
 {
-  "name": "panerasclub",
+  "name": "muchitoamor",
   "version": "0.0.1",
-  "description": "Paneras Club",
+  "description": "Muchito Amor",
   "main": "index.js",
   "scripts": {
     "start": "gulp",

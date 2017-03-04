@@ -1,4 +1,4 @@
-import PanerasClub from './PanerasClub'
+import MuchitoAmor from './MuchitoAmor'
 
-window.App = new PanerasClub()
+window.App = new MuchitoAmor()
 App.start()

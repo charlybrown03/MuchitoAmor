@@ -3,7 +3,7 @@ import routers from './routers'
 import ApplicationLayoutView from './views/Common/ApplicationLayoutView'
 import HeaderView from './views/Common/HeaderView'
 
-const PanerasClub = Marionette.Application.extend({
+const MuchitoAmor = Marionette.Application.extend({
 
   region: '#app',
 
@@ -26,4 +26,4 @@ const PanerasClub = Marionette.Application.extend({
 
 })
 
-export default PanerasClub
+export default MuchitoAmor
