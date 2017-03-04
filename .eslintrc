@@ -1,15 +1,18 @@
 {
-  "installedESLint": true,
-  "extends": "standard",
-  "env": {
-    "browser": true,
-    "node": true
-  },
   "parser": "babel-eslint",
-  "plugins": [
+  "extends": [
     "standard",
+    "plugin:jasmine/recommended"
+  ],
+  "plugins": [
+    "babel",
+    "jasmine",
     "promise"
   ],
+  "env": {
+    "browser": true,
+    "jasmine": true
+  },
   "globals": {
     "$": true,
     "_": true,
@@ -19,6 +22,11 @@
     "Radio": true,
     "alert": true,
     "localStorage": true,
-    "moment": true
+    "moment": true,
+    "__CONFIG__": false
+  },
+  "rules": {
+    "max-len": [ 2, 100, 2],
+    "object-curly-spacing": [2, "always" ]
   }
 }

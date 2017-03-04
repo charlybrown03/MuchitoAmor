@@ -7,6 +7,9 @@ window.Backbone.$ = window.$
 window.Marionette = require('backbone.marionette')
 window.Radio = require('backbone.radio')
 
+require('./helpers/Backbone.Singleton')
+require('./helpers/Backbone.sync')
+
 window.$.ajaxSetup({
   cache: false
 })

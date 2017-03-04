@@ -1,6 +1,7 @@
 import routers from './routers'
 
 import ApplicationLayoutView from './views/Common/ApplicationLayoutView'
+
 import HeaderView from './views/Common/HeaderView'
 
 const MuchitoAmor = Marionette.Application.extend({
@@ -13,8 +14,7 @@ const MuchitoAmor = Marionette.Application.extend({
 
   onStart () {
     this.showView(new ApplicationLayoutView())
-    // this.rootView = new ApplicationLayoutView().render()
-    // TODO - Render Header and Footer
+    // TODO: Render footer
     const headerView = new HeaderView()
     Radio.channel('app').trigger('render:region', 'header', headerView)
 
