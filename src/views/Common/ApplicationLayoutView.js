@@ -10,12 +10,13 @@ const ApplicationLayoutView = Marionette.View.extend({
     footer: '.app--footer'
   },
 
-  initialize () {
+  initialize (options) {
     const radioChannel = Radio.channel('app')
     this.listenTo(radioChannel, 'render:region', this.onRenderRegion)
   },
 
   onRenderRegion (region, view) {
+    const App = this.getOption('App')
     App.getView().getRegion(region).show(view)
   }
 

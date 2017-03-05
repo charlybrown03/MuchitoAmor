@@ -1,7 +1,6 @@
 import routers from './routers'
 
 import ApplicationLayoutView from './views/Common/ApplicationLayoutView'
-
 import HeaderView from './views/Common/HeaderView'
 
 const MuchitoAmor = Marionette.Application.extend({
@@ -13,7 +12,7 @@ const MuchitoAmor = Marionette.Application.extend({
   },
 
   onStart () {
-    this.showView(new ApplicationLayoutView())
+    this.showView(new ApplicationLayoutView({ App: this }))
     // TODO: Render footer
     const headerView = new HeaderView()
     Radio.channel('app').trigger('render:region', 'header', headerView)
@@ -22,6 +21,15 @@ const MuchitoAmor = Marionette.Application.extend({
       root: '/',
       pushState: true
     })
+  },
+
+  navigate: function (url, options) {
+    const defaults = {
+      trigger: true
+    }
+
+    options = _.extend(defaults, options || {})
+    Backbone.history.navigate(url, options)
   }
 
 })

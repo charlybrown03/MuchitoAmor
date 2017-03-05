@@ -3,12 +3,10 @@ import LandingController from '../controllers/LandingController'
 
 const LandingRouter = BaseRouter.extend({
 
+  controller: new LandingController(),
+
   appRoutes: {
     '(/)': 'showLanding'
-  },
-
-  initialize () {
-    this.controller = new LandingController()
   }
 
 })
