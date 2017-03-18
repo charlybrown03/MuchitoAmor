@@ -1,8 +1,33 @@
 .navbar {
+  height: 6rem;
 
   .navbar-brand {
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
     img {
-      width: 5rem;
+      max-height: 6rem;
+      max-width: 20rem;
     }
+  }
+
+  .navbar-nav {
+    position: absolute;
+    bottom: 1rem;
+    z-index: 2;
+
+    @include mq($from: xs, $until: lg) {
+      text-align: center;
+      width: 100%;
+      position: relative;
+      top: 6rem;
+      background-color: $color-default-header;
+    }
+  }
+
+  .navbar-toggler {
+    z-index: 2;
   }
 }
